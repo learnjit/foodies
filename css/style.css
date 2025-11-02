@@ -1,0 +1,346 @@
+/*============================
+  Styles for Foodies
+============================*/
+body::before {
+  content: ""; /* Content inserted before the body's content */
+  display: block; /* Makes it take up a full line */
+  width: 100%;
+  height: 90vh;
+  background-color: var(--background-color);
+  margin: var(--nogap);
+  padding: var(--nogap);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/*===========================
+  Header Styles
+=============================*/
+#header {
+  padding: 15px 0;
+  margin-bottom: 50px;
+}
+/*-- main menu --*/
+.main-menu {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+.main-menu li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+.main-menu li a {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.main-menu li:last-child {
+  padding-right: 0;
+}
+.main-menu li:hover a,
+.main-menu li.active a {
+  color: var(--primary-color);
+}
+.main-menu li:hover a::after,
+.main-menu li.active a::after {
+  color: var(--primary-color);
+  content: "\f111";
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-size: 9px;
+}
+
+/*===========================
+  Hero Section Styles
+=============================*/
+#hero-section {
+  margin-bottom: 80px;
+}
+.hero-image-area {
+  position: relative;
+}
+.hero-image-area .circle-area {
+  position: absolute;
+  background: #fff;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+}
+.hero-image-area .star-area {
+  top: 40%;
+  left: -5%;
+}
+.hero-image-area .client-area {
+  top: 20%;
+  right: 5%;
+  background-image: url("../images/client-image-small.png");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 5%;
+}
+.hero-image-area .client-area p {
+  padding-left: 40px;
+}
+.hero-image-area .vector-img {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+/*-- hero content --*/
+.hero-text-area {
+  padding: 40px 50px 100px 0;
+}
+.hero-text-area h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.hero-text-area p {
+  margin-bottom: 30px;
+}
+.hero-trust-area {
+  margin-top: -120px;
+}
+.hero-trust-area img {
+  padding-right: 30px;
+}
+.hero-trust-area img:last-child {
+  padding-right: 0;
+}
+
+/*===========================
+ Usp Section Styles
+=============================*/
+#usp-section {
+  margin-bottom: 80px;
+}
+.usp-content-area {
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #70707059;
+  padding: 40px 0;
+}
+.icon-area {
+  padding: 15px 17px;
+  text-align: center;
+  font-size: 22px;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border-radius: 12px;
+}
+.usp-item h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.usp-item p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/*============================
+  benifit section styles
+============================*/
+#benifit-section {
+  margin-bottom: 80px;
+}
+.benifit-image-area {
+  background-color: var(--background-color);
+  padding: 0 25px 80px 25px;
+}
+.benifit-text-area {
+  padding: 80px 0 80px 100px;
+  position: relative;
+}
+.benifit-text-area img.art {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  z-index: -1;
+}
+.benifit-text-area h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.benifit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.benifit-list li {
+  margin-bottom: 15px;
+}
+.benifit-list li::before {
+  color: var(--primary-color);
+  content: "\f00c";
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  font-size: 18px;
+  padding-right: 15px;
+}
+/*============================
+  stars section style 
+============================*/
+#stars-section {
+  margin-bottom: 80px;
+}
+.stars-image-area {
+  background-color: var(--background-color);
+  padding: 0 0 80px 25px;
+  text-align: right;
+}
+.stars-text-area {
+  padding: 80px 25px 80px 0;
+  position: relative;
+}
+.stars-text-area img.art {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  z-index: -1;
+}
+.stars-text-area h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.stars-counter-area {
+  padding: 0 0 50px 0;
+}
+.stars-counter-area p {
+  font-size: 15px;
+}
+.stars-counter-area p.stars-counter {
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+/*===========================
+ Features section style
+=============================*/
+#features-section {
+  margin-bottom: 80px;
+}
+.features-header-area h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.features-content-area {
+  gap: var(--nogap);
+}
+.features-item .container {
+  padding: 0;
+  margin: 0;
+  background: var(--background-color);
+  gap: var(--nogap);
+}
+.features-text-area {
+  padding: 25px;
+}
+.features-text-area h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.features-text-area p {
+  margin-bottom: 25px;
+}
+.features-text-area btn {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+/*============================
+  product section style 
+============================*/
+#product-section {
+  margin-bottom: 80px;
+}
+.product-header-area h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.product-item {
+  padding: 25px;
+}
+.product-item img,
+.product-item p,
+.product-item h3,
+.product-item .btn {
+  margin-bottom: 15px;
+}
+/*============================
+  cta section style 
+============================*/
+#cta-section {
+  margin-bottom: 80px;
+}
+#cta-section .cta-content-area {
+  padding: 100px;
+  background: #ffffff url("../images/cta-bg.png") no-repeat center center;
+  color: #ffffff;
+}
+#cta-section .cta-content-area h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+/*============================
+  footer area style
+============================*/
+footer ul.footer-social {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+footer ul.footer-social li {
+  display: inline-block;
+  padding: 10px 20px 10px 0;
+}
+/*============================
+  some common elements 
+============================*/
+.tagline {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* ==========================
+   Some Additional Components
+===========================*/
+.ratting i {
+  color: var(--primary-color);
+}
+.none {
+  text-decoration: line-through;
+}
+.art {
+  animation: floating 3s ease-in-out infinite;
+}
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}

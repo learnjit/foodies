@@ -1,0 +1,188 @@
+/* ==========================
+   GLOBAL STYLES
+========================== */
+:root {
+  --gap: 15px; /* spacing between columns */
+  --nogap: 0px; /* no spacing */
+  --max-width: 1170px; /* container max width */
+  --primary-color: #06c167; /* primary brand color */
+  --text-color: #1d1d1f; /* primary text color */
+  --background-color: #f3fcf7; /* primary background color */
+  --font-family: "Inter", sans-serif; /* default font family */
+  --font-size: 16px; /* default font size */
+  --font-weight: 400; /* default font weight */
+  --padding: var(--gap); /* default padding */
+  --margin: var(--gap); /* default margin */
+  --border: 2px solid var(--primary-color); /* default border */
+
+  /* Button Styles */
+  --btn-radius: 0;
+  --btn-padding: 1em 1.2em;
+  --btn-font-size: 1rem;
+  --btn-font-weight: 400;
+  --btn-primary-bg: var(--primary-color);
+  --btn-primary-text: #fff;
+  --btn-secondary-bg: #f0ede2;
+  --btn-secondary-text: var(--primary-color);
+  --btn-outline-color: var(--primary-color);
+  --btn-hover-opacity: 0.9;
+  --btn-border: 2px solid transparent;
+}
+
+/*==========================
+   Default Reset
+==========================*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  color: var(--text-color);
+  line-height: 1.5;
+  padding: var(--padding);
+  position: relative;
+  padding: 0; /* Override default padding for body */
+  margin: 0; /* Override default margin for body */
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--padding);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+img {
+  max-width: 100%;
+}
+.nogap {
+  margin: var(--nogap);
+  padding: var(--nogap);
+  gap: var(--nogap);
+}
+.bordered {
+  border: var(--border);
+}
+
+/* ==========================
+   COLUMN LAYOUTS
+========================== */
+.col-1 {
+  flex: 1 1 100%;
+}
+.col-2 {
+  flex: 1 1 calc(50% - var(--gap));
+}
+.col-3 {
+  flex: 1 1 calc(33.333% - var(--gap));
+}
+.col-4 {
+  flex: 1 1 calc(25% - var(--gap));
+}
+.col-5 {
+  flex: 1 1 calc(75% - var(--gap));
+}
+
+/*==========================
+   HELPER CLASSES
+==========================*/
+.padding {
+  padding: var(--padding);
+}
+.margin {
+  margin: var(--margin);
+}
+.text-center {
+  text-align: center;
+}
+.show-desktop {
+  display: block;
+}
+.show-mobile {
+  display: none;
+}
+
+/* ==========================
+   BUTTON STYLES        
+===========================*/
+.btn {
+  display: inline-block;
+  padding: var(--btn-padding);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  border-radius: var(--btn-radius);
+  border: var(--btn-border);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.2;
+}
+.btn i {
+  margin-left: 20px;
+}
+/* Button Variants */
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+.btn-secondary {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+}
+.btn-outline {
+  background: transparent;
+  border-color: var(--btn-outline-color);
+  color: var(--btn-outline-color);
+}
+
+/* Hover States */
+.btn:hover {
+  opacity: var(--btn-hover-opacity);
+  transform: translateY(-1px);
+}
+.btn-primary:hover {
+  background-color: var(--btn-primary-text);
+  color: var(--btn-primary-bg);
+  border-color: var(--btn-primary-bg);
+}
+.btn-secondary:hover {
+  background-color: var(--btn-secondary-text);
+  color: var(--btn-secondary-bg);
+}
+.btn-outline:hover {
+  background-color: var(--btn-outline-color);
+  color: var(--btn-primary-text);
+}
+
+/*==========================
+   RESPONSIVE STYLES
+==========================*/
+/*@media (max-width: 992px) {
+  .col-2,
+  .col-3,
+  .col-4 {
+    flex: 1 1 calc(50% - var(--gap));
+  }
+}*/
+
+@media (max-width: 600px) {
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5 {
+    flex: 1 1 100%;
+  }
+  .show-desktop {
+    display: none;
+  }
+  .show-mobile {
+    display: block;
+  }
+}
