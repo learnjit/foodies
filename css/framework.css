@@ -88,7 +88,10 @@ img {
 .col-5 {
   flex: 1 1 calc(75% - var(--gap));
 }
-
+[class*="col-"] .container {
+  margin: var(--nogap);
+  padding: var(--nogap);
+}
 /*==========================
    HELPER CLASSES
 ==========================*/
