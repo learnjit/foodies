@@ -22,6 +22,9 @@ body::before {
   padding: 15px 0;
   margin-bottom: 50px;
 }
+.logo-area {
+  position: relative;
+}
 /*-- main menu --*/
 .main-menu {
   list-style: none;
@@ -59,6 +62,82 @@ body::before {
   left: 50%;
   transform: translate(-50%, 50%);
   font-size: 9px;
+}
+/*-- mobile menu --*/
+.mobile-menu {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  position: absolute;
+  min-height: 300px;
+  background: var(--background-color);
+  width: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid var(--primary-color);
+}
+.mobile-menu li {
+  display: block;
+  padding: 15px 20px;
+}
+.mobile-menu li a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text-color);
+}
+.mobile-menu li.active a,
+.mobile-menu li:hover a {
+  color: var(--primary-color);
+}
+.mobile-menu li a::before {
+  color: var(--primary-color);
+  content: "\f192";
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  font-size: 18px;
+  padding-right: 15px;
+}
+.mobile-menu li.active a::before {
+  content: "\f111";
+}
+.mobile-menu li.active a::after,
+.mobile-menu li:hover a::after {
+  color: var(--primary-color);
+  content: "\f061";
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.mobile-treger:checked ~ .mobile-menu {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s ease;
+}
+.mobile-menu-icon {
+  float: right;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border: 1px solid var(--text-color);
+  padding: 8px;
+  font-size: 18px;
+}
+.mobile-treger:checked ~ label.mobile-menu-icon {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.mobile-menu-icon input[type="checkbox"]:checked + ul.mobile-menu {
+  display: block !important;
+}
+.mobile-treger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  transform: translateX(30%);
+  opacity: 0;
 }
 
 /*===========================
@@ -402,5 +481,90 @@ body::before {
   }
   50% {
     transform: translateY(-15px);
+  }
+}
+
+/*==========================
+   RESPONSIVE STYLES
+==========================*/
+@media (max-width: 600px) {
+  /*====== HEADER ========*/
+  #hero-section {
+    text-align: center;
+  }
+  .hero-text-area {
+    padding: 0px 50px 50px;
+  }
+  .hero-text-area h1 {
+    font-size: 3.5rem;
+  }
+  /*===== USP =====*/
+  .usp-item {
+    flex: 1 1 calc(50% - var(--gap));
+    text-align: center;
+  }
+  .usp-item p.icon-area {
+    display: inline-block;
+    font-size: 2rem;
+  }
+  /*===== Benifit =====*/
+  .benifit-image-area {
+    padding: 0 25px 25px;
+  }
+  .benifit-image-area img {
+    margin-top: -25px;
+  }
+  .benifit-text-area {
+    padding: 50px 30px 0 30px;
+    text-align: center;
+  }
+  .benifit-text-area h2 {
+    font-size: 2.5rem;
+  }
+  .benifit-list {
+    text-align: initial;
+  }
+  /*===== Stars =====*/
+  .stars-image-area {
+    padding: 0 25px 25px;
+  }
+  .stars-image-area img {
+    margin-top: -25px;
+  }
+  .stars-text-area {
+    padding: 50px 30px 0 30px;
+    text-align: center;
+  }
+  .stars-text-area h2 {
+    font-size: 2.4rem;
+  }
+  /*===== product =====*/
+  .product-header-area {
+    text-align: center;
+  }
+  .product-header-area h2 {
+    font-size: 2.5rem;
+  }
+  /*===== CTA =====*/
+  #cta-section .cta-content-area {
+    padding: 35px;
+  }
+  #cta-section .cta-content-area h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+  /*===== Footer =====*/
+  #footer-area {
+    text-align: center;
+  }
+  .footer-content-area {
+    padding: 25px;
+  }
+  .footer-content-area .footer-content-item:first-child {
+    padding-right: 0;
+  }
+  .footer-content-area .footer-form input[type="email"] {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }

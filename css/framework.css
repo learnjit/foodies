@@ -188,4 +188,10 @@ img {
   .show-mobile {
     display: block;
   }
+  .btn-primary {
+    display: block;
+    width: 100%;
+    letter-spacing: 1px;
+    padding: 1.5rem;
+  }
 }

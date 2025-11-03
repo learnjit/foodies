@@ -30,13 +30,31 @@
         <div class="col-2 logo-area">
           <img src="images/logo.png" alt="Foodies" />
           <!-- Mobile Menu -->
-          <a
-            href="#"
+          <input
+            type="checkbox"
+            id="menu-toggle"
+            class="mobile-treger show-mobile"
+          />
+          <label
+            for="menu-toggle"
             class="mobile-menu-icon show-mobile"
             title="mobile-menu-icon"
           >
-            <i class="fa-solid fa-bars"></i><input type="checkbox" />
-          </a>
+            <i class="fa-solid fa-bars"></i>
+          </label>
+          <ul class="mobile-menu">
+            <li class="active">
+              <a href="javascript:void(0)" title="home">Home</a>
+            </li>
+            <li><a href="javascript:void(0)" title="about">About Us</a></li>
+            <li>
+              <a href="javascript:void(0)" title="service">Service Us</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" title="Company">Our Company</a>
+            </li>
+            <li><a href="javascript:void(0)" title="pages">Pages</a></li>
+          </ul>
         </div>
 
         <!-- Menu -->
@@ -193,6 +211,10 @@
     <!-- Stars Section Start -->
     <section id="stars-section">
       <div class="container stars-content-area">
+        <!-- stars imagea area -->
+        <div class="col-2 stars-image-area show-mobile">
+          <img src="images/stars-image.png" alt="Fresh & Organic Juice" />
+        </div>
         <!-- stars content area -->
         <div class="col-2 stars-text-area">
           <img src="images/art.png" alt="some vector art" class="art" />
@@ -218,7 +240,7 @@
           </button>
         </div>
         <!-- stars imagea area -->
-        <div class="col-2 stars-image-area">
+        <div class="col-2 stars-image-area show-desktop">
           <img src="images/stars-image.png" alt="Fresh & Organic Juice" />
         </div>
       </div>
@@ -285,6 +307,15 @@
         <!-- Feature Item -->
         <div class="col-2 features-item nogap">
           <div class="container">
+            <div class="col-2 show-mobile">
+              <div class="features-image-area nogap">
+                <img
+                  src="images/features3.png"
+                  alt="Veggie Food Groove"
+                  class="fetures-image"
+                />
+              </div>
+            </div>
             <div class="col-2">
               <div class="features-text-area">
                 <h3>Veggie Food Groove</h3>
@@ -294,7 +325,7 @@
                 </button>
               </div>
             </div>
-            <div class="col-2">
+            <div class="col-2 show-desktop">
               <div class="features-image-area nogap">
                 <img
                   src="images/features3.png"
@@ -308,6 +339,15 @@
         <!-- Feature Item -->
         <div class="col-2 features-item nogap">
           <div class="container">
+            <div class="col-2 show-mobile">
+              <div class="features-image-area nogap">
+                <img
+                  src="images/features4.png"
+                  alt="That Comes Close"
+                  class="fetures-image"
+                />
+              </div>
+            </div>
             <div class="col-2">
               <div class="features-text-area">
                 <h3>That Comes Close</h3>
@@ -317,7 +357,7 @@
                 </button>
               </div>
             </div>
-            <div class="col-2">
+            <div class="col-2 show-desktop">
               <div class="features-image-area nogap">
                 <img
                   src="images/features4.png"
